@@ -1,22 +1,18 @@
-from django.shortcuts import render
-from rest_framework import viewsets
-from rest_framework import permissions
 from .models import *
+from rest_framework import viewsets, permissions
 from .serializers import *
 
 class InstitutionViewSet(viewsets.ModelViewSet):
-    queryset = Institution.objects.all().order_by('-date_joined')
+    queryset = Institution.objects.all
     permission_classes = [permissions.AllowAny]
     serializer_class = InstitutionSerializar
 
 class OdsViewSet(viewsets.ModelViewSet):
-    queryset =  Ods.objects.all()
+    queryset =  Ods.objects.all
     permission_classes = [permissions.AllowAny]
     serializer_class = OdsSerializar
 
 class InformationSourcesViewSet(viewsets.ModelViewSet):
-    queryset = Institution.objects.all()
+    queryset = Institution.objects.all
     permission_classes = [permissions.AllowAny]
     serializer_class = InformationSourcesSerializar
-
-# Create your views here.
