@@ -15,7 +15,7 @@ class OdsViewSet(viewsets.ModelViewSet):
     serializer_class = OdsSerializar
 
 class InformationSourcesViewSet(viewsets.ModelViewSet):
-    queryset = Institution.objects.all()
+    queryset = InformationSources.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = InformationSourcesSerializar
 
