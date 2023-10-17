@@ -203,3 +203,8 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/angular,django
+
+# Start .gitignore for render:
+db.sqlite3
+env
+__pycache__
